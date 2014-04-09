@@ -1,0 +1,14 @@
+html, body, div, span, a, p, h1, h2, h3, h4, h5, h6, ul, li, button, label, input, form, textarea, header, footer {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 14px;
+  font-family: Tahoma, Helvetica, sans-serif;
+}
+
+a, button {
+  cursor: pointer;
+  outline: none;
+}

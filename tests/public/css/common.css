@@ -1,0 +1,215 @@
+@import url("init.css");
+@import url("sidebar.css");
+@import url("footer.css");
+@import url("tables.css");
+  html, body { height: 87% }
+
+body { min-height: 87% }
+
+body, div, a, p, button, label {
+  font-size: 14px;
+  font-family: Tahoma, Helvetica, sans-serif;
+}
+
+a { cursor: pointer }
+
+.header-top {
+  background-color: #999999;
+  line-height: 50px;
+  color: #fff;
+  height: 47px;
+  border-bottom: 1px solid rgb(77, 174, 59);
+  padding: 0px 10px;
+}
+
+.header-bottom {
+  background-color: #e6e6e6;
+  height: 98px;
+  border-bottom: 1px solid #4dae3b;
+  padding: 0px 10px;
+}
+
+.user-greeting {
+}
+
+.logo-image { margin-top: 1px }
+
+.language {
+  margin: -52px 0px 0px;
+  float: right;
+}
+
+.language a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.language a:hover { text-decoration: underline }
+
+.language .active {
+  padding: 2px 6px 3px;
+  margin: 2px;
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.wrap-inner {
+  width: 100%;
+  margin: 0px auto;
+  max-width: 1200px;
+  display: table;
+}
+
+.action-bar {
+  height: 49px;
+  border-bottom: 1px solid rgb(77, 174, 59);
+}
+
+.action-block {
+  display: inline-block;
+  padding: 3px;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  float:right;
+  margin: 9px 0px;
+  margin-top: -44px;
+}
+
+.main { min-height: 100% }
+
+.content-area { margin: 10px 0px 0px 250px }
+
+.viewlist-page { padding: 3px 42px }
+
+.programme-selector label { padding: 2px 30px 0px 0px }
+
+.programme-selector .dropdown-toggle {
+  width: 220px;
+  text-align: left;
+  text-indent: 12px;
+}
+
+.action-button {
+  background-image: none;
+  width: 116px;
+  background-color: #58B059;
+  border: none;
+  text-shadow: rgba(255,255,255,.5) 0px 0px 1px;
+  color: #fff;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button.disabled {
+	background-color: #a6d69d;
+	cursor: default;
+	outline: none;
+}
+
+.dropdown-toggle .caret {
+  display: block;
+  border-color: transparent;
+  border-top-color: #999;
+  border-width: 5px 5px 0px 5px;
+  border-style: solid;
+  float: right;
+  margin: 12px 12px;
+  width: 0px;
+  height: 0px;
+}
+
+.dropdown-toggle:focus { outline-style: none }
+
+.open .dropdown-toggle {
+  background-image: none;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
+}
+
+.programme-selector .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  width: 220px;
+  box-sizing: border-box;
+  padding: 5px 0;
+  margin: 5px 0;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0, .25);
+  background-clip: padding-box;
+  box-shadow: 0 1px 10px rgba(0,0,0, .35);
+}
+
+.open > .dropdown-menu { display: block }
+
+.btn-group {
+  position: relative }
+
+.dropdown-menu a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  height: 30px;
+  overflow: hidden;line-height: 30px;
+  padding: 0px 8px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #58B059;
+  color: #fff;
+}
+
+.common-button {
+  border: 1px solid #bbb;
+  background-color: #eee;
+  border-radius: 4px;
+  height: 30px;
+  padding: 0px;
+  box-sizing: border-box;
+  line-height: 24px;
+  background-image: -moz-linear-gradient(top, #ffffff, #eee);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#eee));
+  background-image: -webkit-linear-gradient(top, #ffffff, #eee);
+  background-image: -o-linear-gradient(top, #ffffff, #eee);
+  background-image: linear-gradient(to bottom, #ffffff, #eee);
+  cursor: pointer;
+}
+
+.pagination-wrapper { }
+
+.pagination {
+  border: 1px solid #e2e2e2;
+  float: left;
+  border-radius: 3px;
+  padding: 3px 0px 3px 3px;
+	margin: 10px;
+}
+
+.pagination button {
+  width: 32px;
+  text-align: center;
+  margin-right: 3px;
+  border-color: #e2e2e2;
+}
+
+.pagination button:hover {
+  background-image: none;
+  background-color: #58b158;
+  border-color: #58b158;
+  color: #fff;
+}
+
+.pagination button.active {
+  background-image: none;
+	cursor: default;
+  background-color: #e2e2e2;
+  border-color: #e2e2e2;
+  color: #000;
+	outline: none;
+}
+

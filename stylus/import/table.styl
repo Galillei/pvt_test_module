@@ -1,0 +1,77 @@
+
+.table-filter
+  .button
+    width 280px
+
+.table
+  width 100%
+  display table
+  > div
+    width 100%
+    display table-row
+    &:hover
+      background #f5f5f5
+    &.selected
+      background #e6e6e6
+    &.header
+      white-space nowrap
+      font-weight bold
+      &:hover
+        background none
+      .column-1
+        padding 0px
+        width 47px
+      > div
+        padding 0px 30px 0px 0px
+    > div
+      width auto
+      overflow hidden
+      text-overflow clip
+      display table-cell
+      height 35px
+      border-bottom 1px solid #c6c6c6
+      vertical-align middle
+      padding 0px 0px 0px 0px
+  .form-placeholder
+    div
+      overflow visible
+  .checkbox
+    display block
+    margin 1px 15px 0px
+  .inner
+  .double-row-inner
+    text-overflow ellipsis
+    line-height 15px
+    max-height 32px
+    padding-bottom 1px
+    overflow hidden
+    margin-right 15px
+  .column-header
+    &::after
+      content ""
+      display inline-block
+      width 11px
+      height 8px
+      background url("/img/icons.png")
+    &.reverse::after
+      background-position 0px -16px
+    &.active
+      &::after
+        background-position 0px -24px
+      &.reverse::after
+        background-position 0px -8px
+
+  .form-placeholder
+    &:hover
+      background transparent
+    > div
+      border-bottom none
+      height auto
+
+.no-results-message
+  height 40px
+  background #fcf8e3
+  color #c09853
+  border 1px solid rgb(251, 238, 213)
+  text-align center
+  line-height 40px

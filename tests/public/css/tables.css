@@ -1,0 +1,120 @@
+
+.div-table {
+  display: table;
+  width: 100%;
+}
+
+.div-table > * {
+  display: table-row;
+  margin: 0;
+  padding: 0;
+}
+
+.div-table > * > * {
+  display: table-cell;
+  border-bottom: 1px solid #c6c6c6;
+	vertical-align: middle;
+  height: 35px;
+}
+
+.div-table > .selected { background-color: #e6e6e6; }
+
+.div-table > *:hover { background-color: #f5f5f5; }
+
+.div-table > header:hover { background-color: transparent; }
+
+.div-table > header > * {
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+  line-height: normal;
+}
+
+.sorting-icon {
+  display: inline-block;
+  width: 11px;
+  height: 8px;
+  background-image: url(../img/icons.png);
+  background-position: 0 0;
+}
+
+.sorting-icon.active { background-position: 0 -24px }
+
+.sorting-icon.inverted { background-position: 0 -16px }
+
+.sorting-icon.inverted.active { background-position: 0 -8px }
+
+.examinations .h1 { width: 1px; }
+
+.examinations .h2 { width: auto; }
+
+.examinations .h3 { width: 17% }
+
+.examinations .h4 { width: 26% }
+
+.examinations .h5 { width: 22% }
+
+.div-form {
+  display: table;
+  padding: 0px 0px;
+}
+
+.div-form > * {
+  display: table-row;
+  padding: 0px 0px;
+}
+
+.div-form > * > * {
+  display: table-cell;
+  padding: 0px 0px;
+}
+
+.div-form label { cursor: default }
+
+.div-checkbox {
+  overflow: hidden;
+  width: 17px;
+  height: 17px;
+  background-image: url(../img/checkbox.png);
+  background-position: 0 0;
+  cursor: pointer;
+	margin: 0;
+}
+
+.div-checkbox.checked { background-position: 0px -17px }
+
+.div-checkbox:hover { background-position: 0px -34px }
+
+.div-checkbox.checked:hover { background-position: 0px -51px }
+
+.div-checkbox.disabled { background-position: 0px -68px }
+
+.div-checkbox.checked.disabled { background-position: 0px -85px }
+
+.div-table .div-checkbox {
+  display: block;
+  margin: auto;
+}
+
+.table-fixer {
+	height: 35px;
+	overflow: hidden;
+	line-height: 35px;
+}
+
+.checkbox-padding {
+	padding: 0 15px;
+}
+
+.button-fixer {
+	height: 28px;
+	overflow: hidden;
+	line-height: 28px;
+	margin-right: 55px;
+}
+
+#message-noresults {
+	padding: 35px 0;
+	color: #aaa;
+	text-align: center;
+	display: none;
+}

@@ -1,0 +1,68 @@
+
+.navigation
+  display block
+  margin 0px
+  padding 4px 3px 0px
+  border 1px solid #ddd
+  border-radius 2px
+  list-style none
+  li
+    display block
+    margin 0px 0px 4px
+    width 100%
+    a
+      display block
+      border-color #ccc
+      text-align left
+      padding 0px 32px
+      width 100%
+      &.active
+        @extend $active
+        &:hover
+          @extend $active
+
+.language
+  text-align right
+  padding 15px 15px
+  a
+    display inline-block
+    transition all .3s
+    &.active
+      background #555
+      border-radius 4px
+      padding 2px 6px 3px
+    &:hover
+      text-decoration underline
+
+.action-panel
+  position absolute
+  right 0px
+  top 0px
+  width 100%
+  .wrap-inner
+    text-align right
+  .action-block
+    display inline-block
+    border #ccc
+    padding 3px 0px 3px 3px
+    word-spacing -4px
+    border-radius 4px
+    margin 5px 0px 5px auto
+    button
+      margin 0px 3px 0px 0px
+      word-spacing normal
+
+.pagination
+  border-radius 2px
+  margin 10px 0px
+  display inline-block
+  border #e2e2e2
+  padding 3px 0px 3px 3px
+  .button
+    width 30px
+    margin-right 3px
+    border-color #e2e2e2
+    &:hover
+      @extend $active
+    &.active:disabled
+      @extend $button-hover

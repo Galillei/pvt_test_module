@@ -1,0 +1,42 @@
+<div class="action-block">
+    <button class="action-button" name="new"> <?php echo $this->translate("New"); ?> </button>
+    <button class="action-button" name="edit"> <?php echo $this->translate("Edit"); ?> </button>
+    <button class="action-button" name="delete"> <?php echo $this->translate("Delete"); ?> </button>
+</div>
+<div class="content-area">
+    <div class="div-form">
+        <div class="programme-selector">
+            <div>
+                <label> <?php echo $this->translate("Programme"); ?> </label>
+            </div>
+            <div>
+                <div class="btn-group">
+                    <button id="button-filters" class="dropdown-toggle common-button" data-toggle="dropdown">
+                        <span class="caret"></span>
+			<div class="button-fixer"> 
+                          <?php echo $this->translate("All Programmes"); ?>
+			</div>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" id="dropdown-filters">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div-table examinations" id="examinations">
+        <header>
+            <div class="h1"> </div>
+            <div class="h2"> <?php echo $this->translate("Name"); ?> </div>
+            <div class="h3"> <?php echo $this->translate("Time"); ?>, <?php echo $this->translate("min"); ?> </div>
+            <div class="h4"> <?php echo $this->translate("Amount of questions"); ?> </div>
+            <div class="h5"> <?php echo $this->translate("Author"); ?> </div>
+        </header>
+    </div>
+				<div id="message-noresults">
+					<?php echo $this->translate("No matches found"); ?>
+				</div>
+    <div class="pagination-wrapper">
+        <div id="pagination" class="pagination">
+        </div>
+    </div>
+</div>

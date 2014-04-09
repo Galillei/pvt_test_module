@@ -1,0 +1,101 @@
+
+#examinations
+  .table
+    width 100%
+    .column-1
+      width 47px
+    .column-2
+      width auto
+    .column-3
+      width 110px
+    .column-4
+      width 190px
+    .column-5
+      width 140px
+
+#create-examination
+
+  .question-title
+    white-space nowrap
+    text-overflow ellipsis
+    margin-right 15px
+    overflow hidden
+
+  .table
+    width 100%
+    table-layout fixed
+
+    .column-1
+      width 47px
+    .column-2
+      width auto
+
+    div.question
+    div.header
+      cursor pointer
+      font-weight normal
+      color #58b158
+    #new-test-row
+      background #e6e6e6
+    .row > div
+      text-overflow ellipsis
+  .form
+    margin 1px auto
+    border #ddd
+    border-radius 10px
+    padding 15px 15px 0px 15px
+    label
+      min-width 120px
+
+  #qform
+    .dropdown-menu, .dropdown
+      width 400px
+
+  .checkbox
+    margin-bottom -3px
+    display inline-block
+
+  .form-wrapper
+    background #fff
+    padding 14px 0px
+
+  .answer
+    textarea
+      height 30px
+
+    button.remove
+      line-height 28px
+      margin 0px 0px 0px 15px
+      background none
+      border none
+      color #990000
+      font-weight bold
+      transition all .3s
+      &:hover
+        color #ff0000
+        text-shadow rgba( #ff0000, .3 ) 0px 0px 3px
+
+    label
+      width auto
+      min-width 0px
+
+    .checkbox
+    .radio
+      margin 0px 5px -3px 15px
+
+  button.add-answer
+    position absolute
+    bottom 0px
+    left 0px
+    padding 0px
+    margin 15px
+    background none
+    border none
+    &::after
+      content "+"
+      color #58b158
+      font-size 20px
+
+  #qform
+    padding-bottom 40px
+    padding-right 15px

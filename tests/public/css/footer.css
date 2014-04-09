@@ -1,0 +1,20 @@
+footer {
+  height: 50px;
+  border-top: 1px solid #4dae3b;
+  background: #999;
+}
+
+.footer-block {
+  text-align: right;
+  line-height: 50px;
+  padding: 0px 10px;
+}
+
+.footer-block a {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-block a:hover { text-decoration: underline }

@@ -1,0 +1,18 @@
+﻿заглушка-заглушка;dummy-dummy
+Название;Name
+Описание;Description
+Время;Time
+Количество вопросов;Amount of  questions
+Автор;Author
+Программа;Programme
+Выберите программу;Select The Programme
+Создать;New
+Редактировать;Edit
+Удалить;Delete
+Отмена;Cancel
+Показать тесты;Show examinations
+Используйте только буквы английского и русского алфавита, цифры, пробелы, точки, запятые, двоеточия, точки с запятой, нижние подчеркивания, тире, апострофы и символы +, @, #. Максимум 50 символов;
+Максимум 500 символов.;Maximum 500 symbols.
+Пожалуйста, заполните имя;Please fill in the name
+Вы использовали недопустимые символы;You used not allowed symbols
+Имя должно содержать хотя бы одну букву;Name should contain at least one letter

@@ -1,0 +1,37 @@
+/* CSS Document */
+
+.form > div {
+  padding: 15px 0px;
+  cursor: default;
+}
+
+.form p {
+  display: inline-block;
+  min-height: 30px;
+  line-height: 30px;
+  min-width: 120px;
+  vertical-align: top;
+}
+
+.form input {
+  display: block;
+  width: 400px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 10px;
+  border-radius: 8px;
+  border: 1px solid #999;
+}
+
+.form input.small {
+  width: 50px;
+}
+
+.form textarea {
+  display: block;
+  width: 400px;
+  min-height: 120px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  border: 1px solid #999;
+}

@@ -1,0 +1,73 @@
+﻿dummy-dummy;заглушка-заглушка
+Welcome;Добро пожаловать
+Dashboard;Рабочий стол
+My account;Мой аккаунт
+Pages;Страницы
+Profiles;Профили
+Security;Безопасность
+Users;Пользователи
+Roles;Роли
+Capabilities;Права пользователя
+Events;События
+Competences;Компетенции
+Groups;Группы
+Company;Компания
+Language;Язык
+Ru|En;русский | english
+Customers;Клиенты
+Examinations;Тесты
+Show Examinations;Просмотр списка тестов
+
+min;мин
+Name;Название
+Description;Описание
+Time;Время
+Programme;Программа
+Amount of questions;Количество вопросов
+Author;Автор
+Edit;Редактировать
+Delete;Удалить
+New;Создать
+Question;Вопрос
+Answer;Ответ
+Correct answer;Правильный ответ
+Add new answer;Добавить новый ответ
+Save;Сохранить
+Cancel;Отмена
+Yes;Да
+No;Нет
+Ok;OK
+Select a Programme;Выберите программу
+All Programmes;Все программы
+Ru|En;русский | english
+Messages;Look at Table 4 (Messages)
+No matches found;Совпадения не найдены
+Show examinations;Просмотр списка тестов
+Delete examination;Удаление теста
+Delete examinations;Удаление тестов
+You cannot edit several examinations at once;Вы не можете редактировать несколько тестов одновременно
+Are you sure you want to delete the following examination?;Вы действительно хотите удалить тест?
+Are you sure you want to delete the following examinations?;Вы действительно хотите удалить следующие тесты?
+Are you sure you want to exit without saving changes?;Вы действительно хотите выйти без сохранения изменений?
+The examination has been saved;Тест сохранен
+You should save Main Information to start adding Questions to Examination;Вам следует сохранить главную информацию, чтобы начать добавлять вопросы в тест
+Use only letters of English and Russian alphabet, digits, spaces, punctuation marks like full points, commas, colons, semicolon, low lines, dashes, apostrophe and symbols like +, @, #. Maximum 50 symbols.;Используйте только буквы английского и русского алфавита, цифры, пробелы, точки, запятые, двоеточия, точки с запятой, нижние подчеркивания, тире, апострофы и символы +, @, #. Максимум 50 символов.
+Maximum 500 symbols.;Максимум 500 символов.
+Please fill in the name;Пожалуйста, заполните имя
+You used not allowed symbols;Вы использовали недопустимые символы
+Name should contain at least one letter;Имя должно содержать хотя бы одну букву
+Use only digits;Используйте только цифры.
+Add Examination;Создание теста
+New examination;Новый тест
+Saved;Сохранено
+The examination has been saved.;Тест сохранён.
+Name should contain at least one letter.;Пожалуйста, заполните Название.
+You used not allowed symbols.;Вы использовали недопустимые символы.
+Name should contain at least one letter.;Название должно содержать хотя бы одну букву.
+Please, fill in the Time, min.;Пожалуйста, заполните Время, мин.
+Please, use only allowed symbols.;Вы использовали недопустимые символы.
+Please, fill in the Name.;Пожалуйста, заполните Название.
+Answer type;Тип ответа
+Unique choice;Уникальный выбор
+Multiple choice;Множественный выбор
+Correct answer;Правильный ответ

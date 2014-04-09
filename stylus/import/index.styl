@@ -1,0 +1,178 @@
+@import "nib"
+@import "color"
+@import "reset"
+@import "controls"
+@import "layout"
+@import "navigation"
+@import "table"
+@import "page-specific"
+
+.visible
+  visibility visible
+
+.invisible
+  visibility hidden
+
+.user-greeting
+  float left
+  line-height 50px
+  margin 0px 10px
+
+input-shadow( arg )
+  box-shadow rgba( arg, .5 ) 0px 0px 8px
+  border arg
+
+.form
+  table-layout auto
+  transition height .3s
+  display table
+  position relative
+  > div
+    display table-row
+    > div
+      display table-cell
+      vertical-align top
+      position relative
+      padding-bottom 15px
+  label
+    display inline-block
+    min-width 100px
+    line-height 30px
+  textarea
+  input[type="text"]
+    transition all .5s
+    padding 3px 10px
+    display block
+    width 400px
+    &.small
+      width 60px
+    height 30px
+    input-shadow #999
+    border-radius 6px
+    &:disabled
+      input-shadow #e6e6e6
+    &:focus
+      input-shadow #007dff
+      + .tooltip
+        display block
+        opacity 1
+    &.small
+      + .tooltip
+        margin-left -320px
+    &.error
+      input-shadow #f00
+    &.success
+      input-shadow #00ff00
+  .error-message
+    color transparent
+    height 27px
+    font-size 11px
+    padding 4px 10px
+    transition color .3s
+  .tooltip
+    min-height 80px
+    border-radius 8px
+    width 180px
+    transition all .3s
+    margin 0px 10px 0px 20px
+    display none
+    opacity 0
+    position absolute
+    top -30px
+    left 100%
+    background #fff
+    input-shadow #555
+    z-index 5
+    &::before
+    &::after
+      margin-left -20px
+      left 0px
+      content ""
+      position absolute
+      height 0px
+      top 30px
+      width 0px
+      border 10px solid transparent
+      box-sizing content-box
+    &::before
+      z-index 2
+      margin-top 1px
+      border-right-color #555
+    &::after
+      z-index 3
+      border-width 11px
+      border-right-color white
+    .content
+      padding 10px
+  textarea
+    height 80px
+    resize none
+  .button.dropdown
+    display block
+  .required
+    label::after
+      content "*"
+      color red
+      display inline-block
+      margin-left -4px
+  button.save
+    position absolute
+    bottom 0px
+    right 0px
+    margin 15px
+    z-index 3
+  button.close
+    z-index 3
+    cursor pointer
+    position absolute
+    display block
+    top 0px
+    right 0px
+    margin 10px
+    background transparent
+    border none
+    color #ccc
+    transition color .3s
+    font-weight bold
+    &:hover
+      color #aaa
+
+footer
+  position absolute
+  border-top 1px solid #4dae3b
+  bottom 0px
+  width 100%
+  height 50px
+  background #999
+  color #fff
+
+.footer-block
+  text-align right
+  line-height 50px
+  padding 0px 10px
+
+.modal-message
+  display none
+
+.modal-header
+  font-size 24px
+  height 50px
+  line-height 48px
+  padding 0px 15px
+  font-weight bold
+
+.modal-body
+  padding 15px
+
+.modal-footer
+  margin 0px
+  padding 10px 15px
+
+.modal-item-list
+  margin-top 10px
+  display block
+  overflow-y auto
+  max-height 200px
+  li
+    display block
+    padding 0px 0px 2px

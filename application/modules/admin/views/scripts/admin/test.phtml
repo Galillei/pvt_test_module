@@ -1,0 +1,272 @@
+
+<?php
+//echo $this->form;
+?>
+
+  <div class="action-panel">
+    <div class="wrap-inner">
+      <div class="action-block">
+        <button class="button active new" disabled > <?php echo $this->translate("New"); ?> </button>
+        <button class="button active edit" disabled > <?php echo $this->translate("Edit"); ?> </button>
+        <button class="button active delete" disabled > <?php echo $this->translate("Delete"); ?> </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-area" id="create-examination">
+
+    <div class="table" id="table" style="display: none;">
+
+      <div id="new-test-row" style="display: none;">
+				<div>
+					<img id="checkall" class="checkbox disabled" />
+					<?php echo $this->translate("New examination"); ?>
+				</div>
+      </div>
+
+      <div id="new-question-row" style="display: none;">
+        <div>
+					<img id="checkall" class="checkbox disabled" />
+					<span> <?php echo $this->translate("Question"); ?> &numero;<span class="question-index"></span> </span>
+				</div>
+      </div>
+
+      <div class="form-placeholder tform">
+
+        <div>
+
+          <div class="form-wrapper tform" style="display: none;">
+
+            <div class="form tform" id="tform" style="display: none;" data-target="/ajax/createtest">
+
+              <button class="close" tooltip="<?php echo $this->translate("Cancel"); ?>"> X </button>
+
+              <button class="button active save"> <?php echo $this->translate("Save"); ?> </button>
+
+              <input type="hidden" value="" name="id" />
+
+              <input type="hidden" value="" name="programms" id="input-programms" />
+
+              <div class="required">
+                <div>
+                  <label> <?php echo $this->translate("Programme"); ?> </label>
+                </div>
+                <div class="btn-group">
+                  <button class="button dropdown dropdown-toggle" data-toggle="dropdown" name="programms">
+                    <div class="inner"> <?php echo $this->translate("Select a Programme"); ?> </div>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" id="dropdown-programmes">
+                  </ul>
+                </div>
+              </div>
+
+              <div class="required">
+                <div>
+                  <label> <?php echo $this->translate("Name"); ?> </label>
+                </div>
+                <div class="">
+                  <input type="text" name="name" />
+                </div>
+              </div>
+
+              <div class="">
+                <div>
+                  <label> <?php echo $this->translate("Description"); ?> </label>
+                </div>
+                <div class="">
+                  <textarea class="" name="description" id="data-description"></textarea>
+                </div>
+              </div>
+
+              <div class="required">
+                <div>
+                  <label> <?php echo $this->translate("Time"); ?>, <?php echo $this->translate("min"); ?> </label>
+                </div>
+                <div class="">
+                  <input class="small" type="text" name="time" />
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="form-placeholder qform">
+
+        <div>
+
+          <div class="form-wrapper qform" style="display: none;">
+
+            <div class="form qform" style="display: none;" id="qform" data-target="/ajax/ajax/createquestion">
+
+              <button class="close" tooltip="<?php echo $this->translate("Cancel"); ?>"> X </button>
+
+              <button class="button active save"> <?php echo $this->translate("Save"); ?> </button>
+
+              <button class="add-answer" id="add-answer"> <?php echo $this->translate("Add new answer"); ?> </button>
+
+              <input type="hidden" value="" name="qid" />
+
+              <input type="hidden" value="0" name="qtype" id="input-qtype" />
+
+              <input type="hidden" value="" name="qowner" />
+
+              <input type="hidden" value="" name="qindex" />
+
+              <div class="required">
+                <div>
+                  <label> <?php echo $this->translate("Question"); ?> &numero;<span class="question-index"></span> </label>
+                </div>
+                <div class="">
+                  <textarea class="" name="qtitle" maxlength="500"></textarea>
+                </div>
+              </div>
+
+              <div class="">
+                <div>
+                  <label> <?php echo $this->translate("Answer type"); ?> </label>
+                </div>
+                <div class="btn-group">
+                  <button class="button dropdown dropdown-toggle" data-toggle="dropdown" name="qtype">
+                    <div class="inner"> <?php echo $this->translate("Unique choice"); ?> </div>
+                  </button>
+                  <ul class="dropdown-menu qtype" role="menu" data-target="qtype">
+                    <li> <a data-value="0"> <?php echo $this->translate("Unique choice"); ?> </a> </li>
+                    <li> <a data-value="1"> <?php echo $this->translate("Multiple choice"); ?> </a> </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="answer required" style="display:none;">
+                <div>
+                  <label> <?php echo $this->translate("Answer"); ?> &numero;<span class="answer-index"></span> </label>
+                </div>
+                <div class="">
+                  <textarea class="" name="qanswer" maxlength="500"></textarea>
+                </div>
+								<div>
+									<img class="radio" data-group="qcorrect" /> 
+									<span> <?php echo $this->translate("Correct answer"); ?> </span>
+                  <button class="remove"> X </button>
+								</div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <?php echo ( $this->toolTips ); ?>
+
+  <div class="modal fade onerror tform" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <?php echo $this->translate("Error"); ?>
+        </div>
+        <div class="modal-body">
+          <?php echo $this->translate("The examination has not been saved."); ?>
+        </div>
+        <div class="modal-footer">
+          <button class="button active ok" data-dismiss="modal"> <?php echo $this->translate("OK"); ?> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade onerror qform" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <?php echo $this->translate("Error"); ?>
+        </div>
+        <div class="modal-body">
+          <?php echo $this->translate("The question has not been saved."); ?>
+        </div>
+        <div class="modal-footer">
+          <button class="button active ok" data-dismiss="modal"> <?php echo $this->translate("OK"); ?> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade onsave tform" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <?php echo $this->translate("Saved"); ?>
+        </div>
+        <div class="modal-body">
+          <?php echo $this->translate("The examination has been saved."); ?>
+        </div>
+        <div class="modal-footer">
+          <button class="button active ok" data-dismiss="modal"> <?php echo $this->translate("OK"); ?> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade onsave qform" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <?php echo $this->translate("Saved"); ?>
+        </div>
+        <div class="modal-body">
+          <?php echo $this->translate("The question has been saved."); ?>
+        </div>
+        <div class="modal-footer">
+          <button class="button active ok" data-dismiss="modal"> <?php echo $this->translate("OK"); ?> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade oncancel" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class=""> <?php echo $this->translate("Cancel"); ?> </span>
+        </div>
+        <div class="modal-body">
+          <span class=""> <?php echo $this->translate("Are you sure you want to exit without saving changes?"); ?> </span>
+        </div>
+        <div class="modal-footer">
+          <button class="button active yes"> <?php echo $this->translate("Yes"); ?> </button>
+          <button class="button no" data-dismiss="modal"> <?php echo $this->translate("No"); ?> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade ondelete" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+					<span class="modal-message single-item"> <?php echo $this->translate("Delete question"); ?> </span>
+					<span class="modal-message multi-item"> <?php echo $this->translate("Delete questions"); ?> </span>
+        </div>
+        <div class="modal-body">
+          <span class="modal-message single-item"> <?php echo $this->translate("Are you sure you want to delete the following question?"); ?> </span>
+          <span class="modal-message multi-item"> <?php echo $this->translate("Are you sure you want to delete the following questions?"); ?> </span>
+          <ul id="delete-objects" class="modal-item-list">
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button class="button active yes"> <?php echo $this->translate("Yes"); ?> </button>
+          <button class="button no" data-dismiss="modal"> <?php echo $this->translate("No"); ?> </button>
+        </div>
+      </div>
+    </div>
+  </div>

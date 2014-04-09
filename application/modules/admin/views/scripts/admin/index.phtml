@@ -1,0 +1,67 @@
+
+<div class="action-panel">
+	<div class="wrap-inner">
+		<div class="action-block">
+			<button class="button active" id="button-new" disabled > <?php echo $this->translate("New"); ?> </button>
+			<button class="button active" id="button-edit" disabled > <?php echo $this->translate("Edit"); ?> </button>
+			<button class="button active" id="button-delete" disabled > <?php echo $this->translate("Delete"); ?> </button>
+		</div>
+	</div>
+</div>
+
+<div class="content-area" id="examinations">
+
+  <div class="form table-filter">
+    <div>
+      <div>
+        <label> <?php echo $this->translate("Programme"); ?> </label>
+      </div>
+      <div class="btn-group">
+        <button class="button dropdown dropdown-toggle" data-toggle="dropdown" id="button-programmes">
+          <div class="inner"> <?php echo $this->translate("All Programmes"); ?> </div>
+        </button>
+        <ul class="dropdown-menu" role="menu" id="dropdown-programmes">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="table" id="table">
+    <div class="header">
+			<div class="column-1"> <img id="checkall" class="checkbox" /> </div>
+			<div class="column-2"> <?php echo $this->translate("Name"); ?> </div>
+			<div class="column-3"> <?php echo $this->translate("Time"); ?>, <?php echo $this->translate("min"); ?> </div>
+			<div class="column-4"> <?php echo $this->translate("Number of questions"); ?> </div>
+			<div class="column-5"> <?php echo $this->translate("Author"); ?> </div>
+    </div>
+  </div>
+
+  <div class="no-results-message">
+    <?php echo $this->translate("No matches found"); ?>
+  </div>
+
+  <div id="table-pagination" class="pagination">
+	</div>
+
+</div>
+
+  <div class="modal fade" id="popup" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+					<span class="modal-message single-item"> <?php echo $this->translate("Delete examination"); ?> </span>
+					<span class="modal-message multi-item"> <?php echo $this->translate("Delete examinations"); ?> </span>
+        </div>
+        <div class="modal-body">
+          <span class="modal-message single-item"> <?php echo $this->translate("Are you sure you want to delete the following examination?"); ?> </span>
+          <span class="modal-message multi-item"> <?php echo $this->translate("Are you sure you want to delete the following examinations?"); ?> </span>
+          <ul id="delete-objects" class="modal-item-list">
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button id="modal-button-ok" class="button active"> <?php echo $this->translate("Yes"); ?> </button>
+          <button id="modal-button-cancel" class="button" data-dismiss="modal"> <?php echo $this->translate("No"); ?> </button>
+        </div>
+      </div>
+    </div>
+  </div>

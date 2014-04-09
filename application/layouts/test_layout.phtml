@@ -1,0 +1,51 @@
+<?php $this->doctype('XHTML1_STRICT'); ?>
+<html>
+<head>
+    <?php echo $this->headTitle() . "\n"; ?>
+    <?php echo $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8') . "\n"; ?>
+    <?php echo $this->headLink()->prependStylesheet('/css/common.css') . "\n"; ?>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#to_ajax").click(function()
+            {
+                var a = $("#page_test").val();
+                var b = $("#filter_test").val();
+                var c = $("#asc_test").val();
+                var data = {date:{page:a,
+                    filter:b,
+                    sort:c}};
+                $.ajax({
+                    url:"/ajax/ajax/sorting",
+                    dataType:'json',
+                    type:'POST',
+                    data:data,
+                    error:function (error){
+                        console.log(error)
+                    },
+                    success:function(data){
+                        console.log(data);
+                    }
+                })
+            })
+        });
+    </script>
+</head>
+<body>
+<h1> Test Ajax request</h1>
+
+<div>
+    <label for="page_test">Page</label>
+    <input type="text" name="page" id = "page_test"><br>
+    <label for="filter_test">Filter</label>
+    <input type="text" name="filter" id = "filter_test"><br>
+    <label for="asc_test">Sort</label>
+    <input type="text" name="sort" id = "asc_test"><br>
+    <input type="button" name = "to_ajax" id = 'to_ajax' value="Send Ajax">
+</div>
+<div id="dd">
+</div>
+<?php echo $this->layout()->content; ?>
+</body>

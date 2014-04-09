@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <?php echo $this->headTitle() . "\n"; ?>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/common.css">
+  <script src="/js/common.js"></script>
+</head>
+<body>
+
+<div class="global-wrapper">
+
+  <header>
+    <div class="top">
+      <div class="wrap-inner">
+        <div class="user-greeting">
+          <?php echo $this->translate("Welcome"); ?>, Superadmin
+        </div>
+        <div class="language">
+          <a class="<?php if ($this->language=='ru') {echo "active";} ?>" href="?lang=ru">русский</a>
+          <a class="<?php if ($this->language=='en') {echo "active";} ?>" href="?lang=en">english</a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="wrap-inner">
+        <a href="#"> <img class="logo-image" src="/img/hrms-logo.png" alt="Logo"> </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="body-wrapper">
+
+    <div class="action-bar">
+    </div>
+
+    <div class="main">
+      <div class="wrap-inner">
+        <div class="sidebar">
+          <ul class="navigation">
+            <li> <a class="button" href="#"> <?php echo $this->translate("Dashboard"); ?> </a> </li>
+            <li> <a class="button" href="#"> <?php echo $this->translate("My account"); ?> </a> </li>
+            <li> <a class="button" href="#"> <?php echo $this->translate("Pages"); ?> </a> </li>
+            <li> <a class="button" href="#"> <?php echo $this->translate("Security"); ?> </a> </li>
+            <li> <a class="button" href="#"> <?php echo $this->translate("Competences"); ?> </a> </li>
+            <li> <a class="button" href="#"> <?php echo $this->translate("Profiles"); ?> </a> </li>
+            <li> <a class="button" href="#"> <?php echo $this->translate("Groups"); ?> </a> </li>
+            <li> <a class="button" href="#"> <?php echo $this->translate("Company"); ?> </a> </li>
+            <li> <a class="button active" href="/"> <?php echo $this->translate("Examinations"); ?> </a> </li>
+          </ul>
+        </div>
+
+        <?php echo $this->layout()->content; ?>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap-inner">
+      <div class="footer-block">
+        <a href="#"> © 2014, Human Resource Management System </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

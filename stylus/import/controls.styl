@@ -1,0 +1,105 @@
+
+.button
+  a&
+    line-height 28px
+    padding 0px
+  outline none
+  cursor pointer
+  transition all .2s
+  box-shadow rgba( #000, .1 ) 0px 0px 2px
+  overflow hidden
+  white-space nowrap
+  width 116px
+  height 30px
+  display inline-block
+  border 1px solid #999
+  border-radius 4px
+  text-align center
+  line-height normal
+  padding 5px 0px
+  background-color #eee
+  background-image linear-gradient( top, #fff, #eee )
+  &:hover
+    background #e2e2e2
+  &:disabled
+    cursor default
+    background linear-gradient( top, #fff, #eee )
+  &.small
+    width 50px
+  &.active
+    @extends $active
+    &:disabled
+      @extends $active-disabled
+    &:hover
+      @extends $active-hover
+  &.dropdown
+    width 280px
+    text-align left
+    text-indent 10px
+    position relative
+    .open &
+      background #e2e2e2
+      box-shadow inset rgba( #000, .15 ) 0px 5px 15px
+    &::before
+      content ""
+      width 0px
+      height 0px
+      display block
+      border 5px solid transparent
+      border-top-color #999
+      position absolute
+      top 12px
+      right 15px
+  .inner
+    overflow hidden
+    margin-right 30px
+
+.dropdown-menu
+  .open &
+    display block
+  display none
+  border #bbb
+  border-radius 5px
+  background #fff
+  position absolute
+  width 280px
+  overflow hidden
+  z-index 1
+  box-shadow rgba( #000, .5 ) 0px 2px 15px
+  li
+    display block
+    &:hover
+      @extend $active
+    a
+      display block
+      margin 0px 10px
+      padding 4px 0px
+      white-space nowrap
+      overflow hidden
+
+.checkbox
+  background url("/img/checkbox.png")
+
+.radio
+  background url("/img/radio.png")
+
+.checkbox, .radio
+  display inline-block
+  width 17px
+  height 17px
+  border-radius 1px
+  background-position 0px 0px
+  background-repeat no-repeat
+  padding 8px
+  cursor pointer
+  &:hover
+    background-position 0px -34px
+  &.disabled
+    background-position 0px -68px
+    cursor default
+  &.checked
+    background-position 0px -17px
+    &:hover
+      background-position 0px -51px
+    &.disabled
+      background-position 0px -85px

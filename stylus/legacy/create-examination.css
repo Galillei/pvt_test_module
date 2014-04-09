@@ -1,0 +1,17 @@
+
+.create-examination {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 15px 50px;
+  margin: 10px 0px;
+}
+
+.create-exam .button.save {
+  display: block;
+  margin: 0px 0px 0px auto;
+}
+
+.create-examination .dropdown-toggle {
+  width: 220px;
+}

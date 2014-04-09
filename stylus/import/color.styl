@@ -1,0 +1,28 @@
+
+color( x )
+  color x
+  if x == "inherit"
+    text-shadow inherit
+  else if x == "transparent"
+    color x
+    text-shadow none
+  else
+    text-shadow rgba( x, .075 ) 0px 0px 1px
+
+$active
+  background #58b158
+  color #fff
+  border-color #58b158
+
+$active-hover
+  background #248b15
+
+$active-disabled
+  background #a6d69d
+
+$bgBorder = #4dae3b
+
+$button-hover
+  background #e2e2e2
+  color #000
+  border-color #e2e2e2

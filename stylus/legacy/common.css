@@ -1,0 +1,152 @@
+@import url("init.css");
+@import url("bootstrap.min.css");
+@import url("sidebar.css");
+@import url("footer.css");
+@import url("tables.css");
+@import url("layout.css");
+@import url("forms.css");
+@import url("controls.css");
+@import url("popup.css");
+@import url("create-examination.css");
+@import url("stylus.css");
+
+h3 {
+  font-size: 24px;
+}
+
+.logo-image { margin-top: 1px }
+
+.language {
+  margin: -52px 0px 0px;
+  float: right;
+}
+
+.language a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.language a:hover { text-decoration: underline }
+
+.language a.active {
+  padding: 2px 6px 3px;
+  margin: 2px;
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.viewlist-page { padding: 3px 42px }
+
+.programme-selector label { padding: 0px 30px 0px 0px }
+
+.programme-selector .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  width: 280px;
+  box-sizing: border-box;
+  padding: 0px 0;
+  margin: 5px 0;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0, .25);
+  background-clip: padding-box;
+  box-shadow: 0 1px 10px rgba(0,0,0, .35);
+}
+
+.open > .dropdown-menu { display: block }
+
+.dropdown-menu a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  height: 30px;
+  overflow: hidden;
+  line-height: 30px;
+  padding: 0px 8px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #58B059;
+  color: #fff;
+}
+
+.common-button {
+  border: 1px solid #bbb;
+  background-color: #eee;
+  border-radius: 4px;
+  height: 30px;
+  padding: 0px;
+  box-sizing: border-box;
+  line-height: 24px;
+  background-image: -moz-linear-gradient(top, #ffffff, #eee);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#eee));
+  background-image: -webkit-linear-gradient(top, #ffffff, #eee);
+  background-image: -o-linear-gradient(top, #ffffff, #eee);
+  background-image: linear-gradient(to bottom, #ffffff, #eee);
+  cursor: pointer;
+}
+
+.pagination-wrapper { }
+
+.pagination {
+  border: 1px solid #e2e2e2;
+  float: left;
+  border-radius: 3px;
+  padding: 3px 0px 3px 3px;
+  margin: 10px;
+  display: none;
+}
+
+.pagination button {
+  width: 32px;
+  text-align: center;
+  margin-right: 3px;
+  border-color: #e2e2e2;
+}
+
+.pagination button:hover {
+  background-image: none;
+  background-color: #58b158;
+  border-color: #58b158;
+  color: #fff;
+}
+
+.pagination button.active {
+  background-image: none;
+  cursor: default;
+  background-color: #e2e2e2;
+  border-color: #e2e2e2;
+  color: #000;
+}
+
+.modal-title {
+  font-size: 25px;
+}
+
+.modal-body {
+  padding: 15px;
+}
+
+.modal-footer {
+  margin-top: 0px;
+  padding: 10px 15px;
+}
+
+.itemlist {
+  padding: 10px 0px;
+  display: block;
+  overflow-y: scroll;
+  max-height: 250px;
+  margin: 0px;
+}
+
+.modal-message {
+  display: none;
+  font-size: inherit;
+}

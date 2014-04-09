@@ -1,0 +1,98 @@
+form {
+  float: left;
+  display: block;
+  margin: 15px 0px;
+}
+form > div {
+  display: block;
+  word-spacing: -4px;
+}
+form > div > div {
+  display: inline-block;
+  vertical-align: top;
+  word-spacing: normal;
+  padding-bottom: 15px;
+}
+form input,
+form textarea {
+  border: 1px solid #ddd;
+  width: 400px;
+  height: 30px;
+  padding: 2px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+}
+form textarea {
+  height: 100px;
+}
+form a,
+form label {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  width: 150px;
+}
+form a {
+  width: 400px;
+}
+form.create-exam.a {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 15px;
+}
+form .btn-group {
+  padding: 0px;
+  height: 30px;
+}
+form .validable {
+  padding-bottom: 27px;
+}
+form .small input {
+  width: 50px;
+}
+form.questions2 > div {
+  padding: 0px;
+  height: auto;
+}
+form.questions2 > div > div {
+  padding: 0px 0px;
+  height: auto;
+}
+form.questions2 > div > div .desc {
+  height: auto;
+}
+.div-table .active {
+  background-color: #58b059;
+  color: #fff;
+}
+.checkbox-fix {
+  width: 50px;
+}
+.questions .h1 {
+  width: 60px;
+}
+.questions .h2 {
+  width: 70px;
+}
+.questions .h3 {
+  width: auto;
+}
+.questions3 .div-checkbox {
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  margin-right: 5px;
+}
+.q3 {
+  overflow-y: scroll;
+  max-height: 400px;
+  clear: both;
+}
+.required label::after {
+  display: inline;
+  color: #f00;
+  content: "*";
+  margin-left: -4px;
+}
